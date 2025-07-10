@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     targetElement.scrollIntoView({
                         behavior: 'smooth'
                     });
-
-                    // Opcional: Añadir el ID a la URL sin saltar (para compatibilidad o si el usuario lo comparte)
-                    // window.history.pushState(null, null, `#${targetId}`);
                 }
             }
         });

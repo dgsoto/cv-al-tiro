@@ -412,9 +412,6 @@ footer a:hover {
         font-size: 1.5em;
     }
 
-     /* Los CTAs de WhatsApp y Formulario dentro de contact-option ya se hicieron block */
-     /* Los CTAs del hero y paquetes se centran por text-align del padre, y tienen ancho fijo en media query anterior */
-
      .contact-info-small {
         font-size: 0.85em;
     }

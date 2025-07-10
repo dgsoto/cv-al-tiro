@@ -1,0 +1,421 @@
+/* Estilos Generales */
+body {
+    font-family: 'Roboto', sans-serif; /* Usa la fuente de Google Fonts */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 60px; /* Espacio para la barra de navegación fija (si la haces fija, si no quita esto) */
+}
+
+.container {
+    width: 90%;
+    max-width: 960px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 10px; /* Padding horizontal para móviles */
+}
+
+h1, h2, h3 {
+    color: #0056b3; /* Un azul profesional */
+    margin-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Navegación Principal */
+.main-nav {
+    background-color: #007bff; /* Fondo azul */
+    color: white;
+    padding: 10px 0;
+    position: fixed; /* Fija la barra de navegación */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+.main-nav .container {
+     display: flex; /* Usa flexbox para alinear el título y la lista */
+     justify-content: space-between; /* Espacio entre el título y la lista */
+     align-items: center; /* Centra verticalmente */
+     flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.site-title {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 0; /* Añade padding para área clickeable */
+}
+
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinea los elementos de la lista horizontalmente */
+    gap: 20px; /* Espacio entre los elementos de la lista */
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan */
+     justify-content: center; /* Centra enlaces si se envuelven */
+}
+
+.main-nav ul li {
+    margin: 0; /* Elimina margen extra de la lista */
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: opacity 0.3s ease;
+}
+
+.main-nav a:hover {
+    opacity: 0.8;
+}
+
+
+/* Secciones */
+.section {
+    padding: 50px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.bg-light {
+    background-color: #fff; /* Fondo blanco para algunas secciones */
+}
+
+/* Hero Section (la primera) */
+.hero-section {
+    background: linear-gradient(to right, #007bff, #0056b3); /* Degradado azul */
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero-section .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-section .cta-info {
+    margin-top: 20px;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+
+/* Botones CTA (Llamada a la Acción) */
+.cta-button {
+    display: inline-block;
+    background-color: #28a745; /* Verde de WhatsApp */
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    border: none; /* Sin borde */
+    cursor: pointer; /* Indica que es clickeable */
+    display: inline-flex; /* Para alinear icono y texto */
+    align-items: center; /* Centra verticalmente */
+    gap: 8px; /* Espacio entre icono y texto */
+}
+
+.cta-button:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+.cta-button.secondary {
+     background-color: #007bff; /* Azul para CTAs secundarias */
+}
+
+.cta-button.secondary:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilos específicos de secciones */
+.service-package {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.service-package ul {
+    list-style: disc;
+    padding-left: 30px;
+}
+
+.price-note {
+    font-weight: bold;
+    text-align: right;
+    color: #007bff;
+    margin-top: 15px;
+}
+
+.service-package .cta-button {
+     margin-top: 15px; /* Ajusta margen del botón dentro del paquete */
+}
+
+
+.process-list {
+    list-style: none; /* Quitamos los puntos por defecto */
+    padding: 0;
+    counter-reset: process-step; /* Iniciamos un contador */
+}
+
+.process-list li {
+    counter-increment: process-step; /* Incrementamos el contador en cada li */
+    margin-bottom: 25px;
+    padding-left: 40px; /* Espacio para el número */
+    position: relative; /* Para posicionar el número absoluto */
+}
+
+.process-list li::before {
+    content: counter(process-step); /* Muestra el número del contador */
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #007bff; /* Fondo azul para el número */
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* Hace el fondo redondo */
+    text-align: center;
+    line-height: 25px; /* Centra el número verticalmente */
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Contacto */
+.contact-options {
+    display: flex;
+    gap: 30px; /* Espacio entre las dos columnas */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Permite que las columnas se apilen en móvil */
+}
+
+.contact-option {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 300px; /* Ancho mínimo antes de apilar */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.contact-option h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.contact-option p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-option .cta-button {
+    display: block; /* Botón ocupa todo el ancho de la columna */
+    width: calc(100% - 40px); /* Ancho menos padding */
+    margin: 0 auto 20px auto; /* Centra el botón */
+    text-align: center;
+    justify-content: center;
+}
+
+.contact-info-small {
+    margin-top: 40px;
+    font-size: 0.9em;
+    text-align: center;
+    color: #555;
+}
+
+
+/* Estilos del Formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; /* Cada label en su línea */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    font-family: 'Roboto', sans-serif; /* Usa la misma fuente */
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar solo verticalmente */
+}
+
+#form-status {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    min-height: 1.2em; /* Espacio reservado para el mensaje */
+}
+
+#form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+#form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px; /* Ajusta padding para barra nav en móvil si se envuelve */
+    }
+
+     .main-nav .container {
+        flex-direction: column; /* Apila título y lista en móvil */
+        align-items: flex-start; /* Alinea a la izquierda */
+     }
+
+     .main-nav ul {
+        margin-top: 10px; /* Espacio entre título y lista */
+        gap: 10px; /* Reduce espacio entre enlaces */
+        justify-content: flex-start; /* Alinea enlaces a la izquierda */
+     }
+
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+     .process-list li {
+        padding-left: 35px; /* Ajusta espacio para el número en móvil */
+    }
+
+    .process-list li::before {
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 0.8em;
+    }
+
+    .contact-options {
+        flex-direction: column; /* Apila las columnas de contacto en móvil */
+        gap: 20px; /* Reduce el espacio entre ellas */
+    }
+
+    .contact-option {
+        min-width: unset; /* Elimina el ancho mínimo para que ocupe el 100% */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+     /* Los CTAs de WhatsApp y Formulario dentro de contact-option ya se hicieron block */
+     /* Los CTAs del hero y paquetes se centran por text-align del padre, y tienen ancho fijo en media query anterior */
+
+     .contact-info-small {
+        font-size: 0.85em;
+    }
+}
